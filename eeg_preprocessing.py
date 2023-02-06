@@ -23,7 +23,7 @@ DURATION_PLOT=10
 FILTERED_CHANNELS = ['HEO', 'Trigger', 'CZ', 'CB1', 'CB2']
 SECONDS_CROP_FROM = 5.0
 RANGE_FREQUENCE_HIGHEST = 40
-RANGE_FREQUENCE_LOWEST = 0
+RANGE_FREQUENCE_LOWEST = 0.5
 HZ_RESAMPLE = 200
 REF_CHANNELS=['M1', 'M2']
 # ICA
@@ -119,8 +119,8 @@ def raw_ica(raw_process_temp):
 
     # ICA                                                         
     ica_preprocessed = ICA(
-        n_components=len(raw_process_temp.ch_names)-3,
-        #   n_components=7,
+        # n_components=len(raw_process_temp.ch_names)-3,
+        n_components=7,
         max_iter="auto",
         method="infomax",
         random_state=97,
@@ -202,7 +202,7 @@ annotations_experimental = get_experimental_raw_list_from_annotations(raw_ica_pr
 raw_ica_preprocessed.set_annotations(annotations_experimental)
 
 # Save preprocessed raw and ica files
-ica_preprocessed.save('./prepocessedFiles/ica_' + FILENAME + str(get_timestamp()) + '-ica.fif')
-raw_ica_preprocessed.save('./prepocessedFiles/raw_ica_' + FILENAME + str(get_timestamp()) + '.fif')
+ica_preprocessed.save('./preprocessedFiles/ica_' + FILENAME + str(get_timestamp()) + '-ica.fif')
+raw_ica_preprocessed.save('./preprocessedFiles/raw_ica_' + FILENAME + str(get_timestamp()) + '.fif')
 
 pass
