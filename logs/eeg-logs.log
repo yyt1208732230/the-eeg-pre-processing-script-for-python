@@ -1,288 +1,84 @@
-15:33:17,717 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-15:33:17,720 root INFO Montage Loaded:./data/64_ch_montage.loc
-15:33:20,486 root INFO Raw figures visualized
-15:33:20,697 root INFO Channels dropped: test002
-15:33:21,215 root INFO Time cropped: test002
-15:33:23,322 root INFO Frequency filtered: test002
-15:33:25,356 root INFO Data resampled: test002
-15:33:25,724 root INFO Raw referenced: test002
-15:33:25,740 root INFO Preprocessing completed: test002
-15:40:49,681 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-15:40:49,685 root INFO Montage Loaded:./data/64_ch_montage.loc
-15:40:52,539 root INFO Raw figures visualized
-15:40:52,777 root INFO Channels dropped: ./visulization/test002
-15:40:53,306 root INFO Time cropped: ./visulization/test002
-15:40:55,411 root INFO Frequency filtered: ./visulization/test002
-15:40:57,509 root INFO Data resampled: ./visulization/test002
-15:40:57,868 root INFO Raw referenced: ./visulization/test002
-15:40:57,885 root INFO --Preprocessing completed: test002
-16:01:00,1 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-16:01:00,5 root INFO Montage Loaded:./data/64_ch_montage.loc
-16:01:02,875 root INFO Raw figures visualized
-16:01:03,123 root INFO Channels dropped: ./visulization/test002
-16:01:03,662 root INFO Time cropped: ./visulization/test002
-16:01:06,294 root INFO Frequency filtered: ./visulization/test002
-16:01:08,723 root INFO Data resampled: ./visulization/test002
-16:01:09,77 root INFO Raw referenced: ./visulization/test002
-16:01:09,93 root INFO --Preprocessing completed: test002
-16:05:22,802 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-16:05:22,806 root INFO Montage Loaded:./data/64_ch_montage.loc
-16:05:25,552 root INFO Raw figures visualized
-16:05:25,665 root INFO Channels dropped: ./visulization/test003
-16:05:26,379 root INFO Time cropped: ./visulization/test003
-16:05:28,734 root INFO Frequency filtered: ./visulization/test003
-16:05:30,964 root INFO Data resampled: ./visulization/test003
-16:05:31,338 root INFO Raw referenced: ./visulization/test003
-16:05:31,354 root INFO --Preprocessing completed: test003
-16:06:15,845 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-16:06:15,849 root INFO Montage Loaded:./data/64_ch_montage.loc
-16:06:19,162 root INFO Raw figures visualized
-16:06:19,274 root INFO Channels dropped: ./visulization/test003
-16:06:19,805 root INFO Time cropped: ./visulization/test003
-16:06:21,958 root INFO Frequency filtered: ./visulization/test003
-16:06:24,160 root INFO Data resampled: ./visulization/test003
-16:06:24,571 root INFO Raw referenced: ./visulization/test003
-16:06:24,588 root INFO --Preprocessing completed: test003
-16:08:26,287 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-16:08:26,291 root INFO Montage Loaded:./data/64_ch_montage.loc
-16:08:29,52 root INFO Raw figures visualized
-16:08:29,175 root INFO Channels dropped: ./visulization/test004
-16:08:29,736 root INFO Time cropped: ./visulization/test004
-16:08:31,884 root INFO Frequency filtered: ./visulization/test004
-16:08:34,52 root INFO Data resampled: ./visulization/test004
-16:08:34,461 root INFO Raw referenced: ./visulization/test004
-16:08:34,479 root INFO --Preprocessing completed: test004
-16:13:40,126 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-16:13:40,137 root INFO Montage Loaded:./data/64_ch_montage.loc
-16:13:50,687 root INFO Raw figures visualized
-16:17:58,622 root INFO Channels dropped: test05
-16:17:59,501 root INFO Time cropped: test05
-16:18:01,964 root INFO Frequency filtered: test05
-16:18:04,247 root INFO Data resampled: test05
-16:18:04,999 root INFO Raw referenced: test05
-16:18:05,16 root INFO --Preprocessing completed: test05
-16:18:55,423 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-16:18:55,435 root INFO Montage Loaded:./data/64_ch_montage.loc
-16:18:59,942 root INFO Raw figures visualized
-16:33:00,858 root INFO Channels dropped: test05
-16:33:02,46 root INFO Time cropped: test05
-16:33:04,901 root INFO Frequency filtered: test05
-16:33:07,348 root INFO Data resampled: test05
-16:33:08,299 root INFO Raw referenced: test05
-16:33:08,318 root INFO --Preprocessing completed: test05
-11:08:37,769 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-11:08:37,787 root INFO Montage Loaded:./data/64_ch_montage.loc
-11:08:42,498 root INFO Raw figures visualized
-20:07:08,249 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-20:07:08,265 root INFO Montage Loaded:./data/64_ch_montage.loc
-20:07:12,10 root INFO Raw figures visualized
-20:07:12,222 root INFO Channels dropped: test007
-20:07:13,27 root INFO Time cropped: test007
-20:07:15,772 root INFO Frequency filtered: test007
-20:07:18,178 root INFO Data resampled: test007
-20:07:18,724 root INFO Raw referenced: test007
-20:07:18,739 root INFO --Preprocessing completed: test007
-20:09:06,570 root INFO --ICA completed: test007
-20:14:55,483 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-20:14:55,499 root INFO Montage Loaded:./data/64_ch_montage.loc
-20:14:58,395 root INFO Raw figures visualized
-20:14:58,599 root INFO Channels dropped: test007
-20:14:59,402 root INFO Time cropped: test007
-20:15:01,810 root INFO Frequency filtered: test007
-20:15:03,984 root INFO Data resampled: test007
-20:15:04,572 root INFO Raw referenced: test007
-20:15:04,587 root INFO --Preprocessing completed: test007
-20:16:50,267 root INFO --ICA completed: test007
-20:16:50,450 root INFO --ICA fif files saved: test007
-20:16:50,488 root INFO Reset annotations completed: test007
-20:18:57,363 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-20:18:57,379 root INFO Montage Loaded:./data/64_ch_montage.loc
-20:19:00,146 root INFO Raw figures visualized
-20:19:00,360 root INFO Channels dropped: test008
-20:19:00,969 root INFO Time cropped: test008
-20:19:03,283 root INFO Frequency filtered: test008
-20:19:05,829 root INFO Data resampled: test008
-20:19:06,288 root INFO Raw referenced: test008
-20:19:06,318 root INFO --Preprocessing completed: test008
-20:20:52,406 root INFO --ICA completed: test008
-20:20:52,589 root INFO --ICA fif files saved: test008
-20:20:52,627 root INFO Reset annotations completed: test008
-20:54:44,447 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-20:54:44,462 root INFO Montage Loaded:./data/64_ch_montage.loc
-20:54:47,151 root INFO Raw figures visualized
-20:54:47,340 root INFO Channels dropped: test009
-20:54:47,916 root INFO Time cropped: test009
-20:54:50,0 root INFO Frequency filtered: test009
-20:54:52,82 root INFO Data resampled: test009
-20:54:52,515 root INFO Raw referenced: test009
-20:54:52,525 root INFO --Preprocessing completed: test009
-20:56:38,132 root INFO --ICA completed: test009
-20:56:38,300 root INFO --ICA fif files saved: test009
-20:56:38,328 root INFO Reset annotations completed: test009
-21:01:22,37 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-21:01:22,41 root INFO Montage Loaded:./data/64_ch_montage.loc
-21:01:24,672 root INFO Raw figures visualized
-21:01:24,845 root INFO Channels dropped: test0010
-21:01:25,394 root INFO Time cropped: test0010
-21:01:27,445 root INFO Frequency filtered: test0010
-21:01:29,688 root INFO Data resampled: test0010
-21:01:30,126 root INFO Raw referenced: test0010
-21:01:30,127 root INFO --Preprocessing completed: test0010
-21:03:14,485 root INFO --ICA completed: test0010
-21:03:14,657 root INFO --ICA fif files saved: test0010
-21:03:14,694 root INFO Reset annotations completed: test0010
-21:44:10,542 root INFO Raw Loaded:./data/yuedurenwu01-12 Data 202301291643.edf
-21:44:10,548 root INFO Montage Loaded:./data/64_ch_montage.loc
-21:44:13,362 root INFO Raw figures visualized
-21:44:13,619 root INFO Channels dropped: test0011
-21:44:14,163 root INFO Time cropped: test0011
-21:44:16,321 root INFO Frequency filtered: test0011
-21:44:18,626 root INFO Data resampled: test0011
-21:44:19,4 root INFO Raw referenced: test0011
-21:44:19,16 root INFO --Preprocessing completed: test0011
-21:46:06,658 root INFO --ICA completed: test0011
-21:46:06,818 root INFO --ICA fif files saved: test0011
-21:46:06,856 root INFO Reset annotations completed: test0011
-11:21:54,650 root INFO Power generated on:./preprocessedFiles/yuetengTest01-tfr.csv
-11:21:54,674 root INFO Time frequency (power) processsing completed: yuetengTest01
-12:15:19,824 root INFO Power generated on:./preprocessedFiles/ERP_test022101-tfr.csv
-12:15:29,333 root ERROR Failed to get power values: 'NoneType' object has no attribute 'copy'
-12:15:29,334 root INFO Time frequency (power) processsing completed: ERP_test022101
-12:31:09,730 root INFO Engaged Power generated on:./preprocessedFiles/ERP_test022101-tfr.csv
-12:31:49,127 root INFO Power generated on:./preprocessedFiles/ERP_test022101-tfr.csv
-12:32:44,395 root INFO Time frequency (power) processsing completed: ERP_test022101
-12:33:16,340 root INFO Engaged Power generated on:./preprocessedFiles/ERP_test022101-tfr.csv
-12:34:11,270 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,273 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,276 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,278 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,282 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,284 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,288 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,290 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,292 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,294 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,298 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,300 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,302 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,304 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,308 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,310 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,312 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,314 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,316 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,317 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,319 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,321 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,324 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,325 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,328 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,329 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,332 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,333 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,336 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,339 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,341 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,342 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,345 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,346 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,348 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,349 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,351 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,353 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,357 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,358 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,360 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,361 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,364 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,365 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,367 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,369 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,371 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,373 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,375 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,376 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,378 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,380 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,382 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,383 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,385 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,387 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,390 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,391 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,393 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,394 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,396 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,398 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,401 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,402 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,404 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,406 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,408 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,410 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,412 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,413 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,415 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,416 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,418 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,419 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,422 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,424 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,426 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,427 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,429 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,430 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,433 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,434 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,436 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,438 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,440 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,441 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,443 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,444 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,447 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,449 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,453 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,454 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,456 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,457 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,460 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,462 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,464 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,466 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,469 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,470 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,472 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,473 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,475 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,476 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,478 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,479 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,482 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,483 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,484 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,485 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,488 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,489 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,491 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,492 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,494 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,495 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,497 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,498 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,500 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,501 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,503 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:34:11,504 matplotlib.category INFO Using categorical units to plot a list of strings that are all parsable as floats or dates. If these strings should be plotted as numbers, cast to the appropriate data type before plotting.
-12:36:42,703 root INFO Power generated on:./preprocessedFiles/ERP_test022101-tfr.csv
-12:37:07,715 root INFO Time frequency (power) processsing completed: ERP_test022101
-12:37:12,541 root INFO Engaged Power generated on:./preprocessedFiles/ERP_test022101-tfr.csv
-12:39:08,839 root INFO Engaged Power generated on:./preprocessedFiles/ERP_test022101_engaged_-tfr.csv
-12:40:53,872 root INFO Power generated on:./preprocessedFiles/ERP_test022101-tfr.csv
-12:41:00,858 root INFO Time frequency (power) processsing completed: ERP_test022101
-12:41:03,791 root INFO Engaged Power generated on:./preprocessedFiles/ERP_test022101_engaged_-tfr.csv
-12:41:21,336 root INFO Engaged Power generated on:./preprocessedFiles/ERP_test022101_disengaged_-tfr.csv
-12:44:25,328 root INFO Power generated on:./preprocessedFiles/ERP_test022101-tfr.csv
-12:44:27,27 root INFO Time frequency (power) processsing completed: ERP_test022101
-12:44:30,5 root INFO Engaged Power generated on:./preprocessedFiles/ERP_test022101_engaged_-tfr.csv
-12:44:33,786 root INFO Engaged Power generated on:./preprocessedFiles/ERP_test022101_disengaged_-tfr.csv
+18:47:00,199 INFO     [eeg_processing.py:84] Starting processing participant: participant01, located on: ./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:47:00,763 INFO     [eeg_preprocessing.py:51] Raw Loaded:./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:47:00,929 INFO     [eeg_preprocessing.py:61] Montage Loaded:./data/64_ch_montage.loc
+18:47:05,664 INFO     [eeg_preprocessing.py:68] Raw figures visualized
+18:47:05,898 INFO     [eeg_preprocessing.py:92] Channels dropped: participant01
+18:47:06,812 INFO     [eeg_preprocessing.py:97] Time cropped: participant01
+18:47:09,288 INFO     [eeg_preprocessing.py:102] Frequency filtered: participant01
+18:47:14,015 INFO     [eeg_preprocessing.py:107] Data resampled: participant01
+18:47:14,812 INFO     [eeg_preprocessing.py:112] Raw referenced: participant01
+18:47:14,840 INFO     [eeg_preprocessing.py:245] --Preprocessing completed: participant01
+18:49:22,844 INFO     [eeg_preprocessing.py:249] --ICA completed: participant01
+18:49:23,092 INFO     [eeg_preprocessing.py:254] --ICA fif files saved: participant01
+18:49:23,393 INFO     [eeg_preprocessing.py:267] Reset annotations completed: participant01
+18:49:23,580 ERROR    [eeg_time_frequency.py:213] Failed to get epoches from file path: Channel(s) HEO, Trigger, CZ, CB1, CB2 not found, nothing dropped.
+18:49:23,587 ERROR    [eeg_time_frequency.py:224] Failed to get power values: local variable 'epochs' referenced before assignment
+18:49:23,587 ERROR    [eeg_time_frequency.py:239] Failed to ERP processing: local variable 'epochs' referenced before assignment
+18:49:23,595 INFO     [eeg_processing.py:110] Ending processing participant: participant01
+18:49:23,595 INFO     [eeg_processing.py:84] Starting processing participant: Cao_01, located on: ./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:49:24,190 INFO     [eeg_preprocessing.py:51] Raw Loaded:./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:49:24,363 INFO     [eeg_preprocessing.py:61] Montage Loaded:./data/64_ch_montage.loc
+18:49:27,719 INFO     [eeg_preprocessing.py:68] Raw figures visualized
+18:49:27,955 INFO     [eeg_preprocessing.py:92] Channels dropped: Cao_01
+18:49:28,819 INFO     [eeg_preprocessing.py:97] Time cropped: Cao_01
+18:49:31,466 INFO     [eeg_preprocessing.py:102] Frequency filtered: Cao_01
+18:49:37,225 INFO     [eeg_preprocessing.py:107] Data resampled: Cao_01
+18:49:37,980 INFO     [eeg_preprocessing.py:112] Raw referenced: Cao_01
+18:49:37,998 INFO     [eeg_preprocessing.py:245] --Preprocessing completed: Cao_01
+18:50:57,277 INFO     [eeg_processing.py:84] Starting processing participant: participant01, located on: ./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:50:57,852 INFO     [eeg_preprocessing.py:51] Raw Loaded:./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:50:57,998 INFO     [eeg_preprocessing.py:61] Montage Loaded:./data/64_ch_montage.loc
+18:51:06,510 INFO     [eeg_processing.py:84] Starting processing participant: participant01, located on: ./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:51:07,126 INFO     [eeg_preprocessing.py:51] Raw Loaded:./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:51:07,270 INFO     [eeg_preprocessing.py:61] Montage Loaded:./data/64_ch_montage.loc
+18:51:12,371 INFO     [eeg_preprocessing.py:68] Raw figures visualized
+18:51:12,577 INFO     [eeg_preprocessing.py:92] Channels dropped: participant01
+18:51:13,484 INFO     [eeg_preprocessing.py:97] Time cropped: participant01
+18:51:16,113 INFO     [eeg_preprocessing.py:102] Frequency filtered: participant01
+18:51:21,484 INFO     [eeg_preprocessing.py:107] Data resampled: participant01
+18:51:22,273 INFO     [eeg_preprocessing.py:112] Raw referenced: participant01
+18:51:22,291 INFO     [eeg_preprocessing.py:245] --Preprocessing completed: participant01
+18:53:27,485 INFO     [eeg_preprocessing.py:249] --ICA completed: participant01
+18:53:27,731 INFO     [eeg_preprocessing.py:254] --ICA fif files saved: participant01
+18:53:28,002 INFO     [eeg_preprocessing.py:267] Reset annotations completed: participant01
+18:53:40,252 INFO     [eeg_time_frequency.py:221] Power generated on:./preprocessedFiles/participant01-tfr.csv
+18:53:40,253 INFO     [eeg_time_frequency.py:222] Time frequency (power) processsing completed: participant01
+18:53:45,269 INFO     [eeg_time_frequency.py:232] Engaged Power generated on:./preprocessedFiles/participant01_engaged_-tfr.csv
+18:53:49,968 INFO     [eeg_time_frequency.py:237] Engaged Power generated on:./preprocessedFiles/participant01_disengaged_-tfr.csv
+18:53:50,802 INFO     [eeg_processing.py:110] Ending processing participant: participant01
+18:53:50,802 INFO     [eeg_processing.py:84] Starting processing participant: Cao_01, located on: ./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:53:51,396 INFO     [eeg_preprocessing.py:51] Raw Loaded:./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:53:51,536 INFO     [eeg_preprocessing.py:61] Montage Loaded:./data/64_ch_montage.loc
+18:53:54,918 INFO     [eeg_preprocessing.py:68] Raw figures visualized
+18:53:55,278 INFO     [eeg_preprocessing.py:92] Channels dropped: Cao_01
+18:53:56,186 INFO     [eeg_preprocessing.py:97] Time cropped: Cao_01
+18:53:58,943 INFO     [eeg_preprocessing.py:102] Frequency filtered: Cao_01
+18:54:03,753 INFO     [eeg_preprocessing.py:107] Data resampled: Cao_01
+18:54:04,500 INFO     [eeg_preprocessing.py:112] Raw referenced: Cao_01
+18:54:04,520 INFO     [eeg_preprocessing.py:245] --Preprocessing completed: Cao_01
+18:56:10,011 INFO     [eeg_preprocessing.py:249] --ICA completed: Cao_01
+18:56:10,265 INFO     [eeg_preprocessing.py:254] --ICA fif files saved: Cao_01
+18:56:10,543 INFO     [eeg_preprocessing.py:267] Reset annotations completed: Cao_01
+18:56:25,489 INFO     [eeg_time_frequency.py:221] Power generated on:./preprocessedFiles/Cao_01-tfr.csv
+18:56:25,489 INFO     [eeg_time_frequency.py:222] Time frequency (power) processsing completed: Cao_01
+18:56:29,989 INFO     [eeg_time_frequency.py:232] Engaged Power generated on:./preprocessedFiles/Cao_01_engaged_-tfr.csv
+18:56:33,884 INFO     [eeg_time_frequency.py:237] Engaged Power generated on:./preprocessedFiles/Cao_01_disengaged_-tfr.csv
+18:56:34,618 INFO     [eeg_processing.py:110] Ending processing participant: Cao_01
+18:56:34,618 INFO     [eeg_processing.py:84] Starting processing participant: participant03, located on: ./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:56:35,605 INFO     [eeg_preprocessing.py:51] Raw Loaded:./data/Reading Cao Acq 2023_02_24_1803 Data.edf
+18:56:35,765 INFO     [eeg_preprocessing.py:61] Montage Loaded:./data/64_ch_montage.loc
+18:56:39,138 INFO     [eeg_preprocessing.py:68] Raw figures visualized
+18:56:39,400 INFO     [eeg_preprocessing.py:92] Channels dropped: participant03
+18:56:40,374 INFO     [eeg_preprocessing.py:97] Time cropped: participant03
+18:56:43,432 INFO     [eeg_preprocessing.py:102] Frequency filtered: participant03
+18:56:48,379 INFO     [eeg_preprocessing.py:107] Data resampled: participant03
+18:56:49,150 INFO     [eeg_preprocessing.py:112] Raw referenced: participant03
+18:56:49,172 INFO     [eeg_preprocessing.py:245] --Preprocessing completed: participant03
+18:58:54,520 INFO     [eeg_preprocessing.py:249] --ICA completed: participant03
+18:58:54,758 INFO     [eeg_preprocessing.py:254] --ICA fif files saved: participant03
+18:58:55,032 INFO     [eeg_preprocessing.py:267] Reset annotations completed: participant03
+18:59:07,060 INFO     [eeg_time_frequency.py:221] Power generated on:./preprocessedFiles/participant03-tfr.csv
+18:59:07,060 INFO     [eeg_time_frequency.py:222] Time frequency (power) processsing completed: participant03
+18:59:11,072 INFO     [eeg_time_frequency.py:232] Engaged Power generated on:./preprocessedFiles/participant03_engaged_-tfr.csv
+18:59:14,707 INFO     [eeg_time_frequency.py:237] Engaged Power generated on:./preprocessedFiles/participant03_disengaged_-tfr.csv
+18:59:15,425 INFO     [eeg_processing.py:110] Ending processing participant: participant03
