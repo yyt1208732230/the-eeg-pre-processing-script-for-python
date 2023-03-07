@@ -20,11 +20,11 @@ from util import *
 
 # Initial
 
-logging.basicConfig(filename=LOGS_PATH,
-                    filemode='a',
-                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-                    datefmt='%H:%M:%S',
-                    level=logging.INFO)
+# logging.basicConfig(filename=LOGS_PATH,
+#                     filemode='a',
+#                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+#                     datefmt='%H:%M:%S',
+#                     level=logging.INFO)
 
 
 # --------------------------------------
@@ -55,6 +55,7 @@ def data_loading(raw_file_path, custom_montage_path, raw_visulization_path='./')
     locs_info_path = (custom_montage_path)
     chan_types_dict = {"HEO":"eog", "VEO":"eog"}
     montage = mne.channels.read_custom_montage(locs_info_path)
+    raw.drop_channels(['EKG', 'EMG']) #temp2023/02/26
     raw.set_montage(montage)
     raw.set_channel_types(chan_types_dict)
     logging.info('Montage Loaded:' + custom_montage_path)
@@ -195,11 +196,12 @@ def get_experimental_raw_list_from_annotations(raw, training_prase, experimental
     for idx, _desc in enumerate(description):
         if(_desc == ANNOTATION_DESCRIPTION_TRAINING_STRAT):
             onset_training.append(onset[idx])
-        if(_desc == ANNOTATION_DESCRIPTION_EXPERIMENTAL_STRAT and idx > 4): #Temp 本次demo标注用错的特殊处理
-        # if(_desc == ANNOTATION_DESCRIPTION_EXPERIMENTAL_STRAT): #Origin 正常版本
+        # if(_desc == ANNOTATION_DESCRIPTION_EXPERIMENTAL_STRAT and idx > 4): #Temp 本次demo标注用错的特殊处理
+        if(_desc == ANNOTATION_DESCRIPTION_EXPERIMENTAL_STRAT): #Origin 正常版本
             onset_experimental.append(onset[idx] - 5.0)
 
     if(len(onset_experimental) != len(experimental_prase)):
+        logging.error("Sth wrong with the length from the onset and description of annotations. " + len(onset_experimental) + " to " + len(experimental_prase))
         raise Exception("Sth wrong with the length from the onset and description of annotations.")
 
 
@@ -214,7 +216,8 @@ def get_experimental_raw_list_from_annotations(raw, training_prase, experimental
 # System Args
 def parse_args():
     parse = argparse.ArgumentParser(description='Load and Preprocess the raw curry file for one subject.')
-    parse.add_argument('-n', '--subjectName', metavar='', default='test05', required=False, help='the Name of the Subject')
+    parse.add_argument('-n', '--subjectName', metavar='', default='Cao Driving04', required=False, help='the Name of the Subject')
+    # parse.add_argument('-p', '--raw_file_path', metavar='', default='./', required=True, help='the path of the raw file')
     sysArgs = parse.parse_args()
     return sysArgs
 
@@ -222,47 +225,64 @@ def parse_args():
 def run_preprocessing(args):
     preprocessing_succeed = False
     ica_succeed = False
+    annotation_reset_succeed = False
     subjectName = args["subjectName"]
     raw_file_path = args["raw_file_path"]
     custom_montage_path = args["custom_montage_path"]
     raw_visulization_path = args["raw_visulization_path"]
+    preprocess_status = args["preprocess_status"]
+    annotation_reset_status = args["annotation_reset_status"]
 
-    # 1. Data loading 数据导入
-    raw, montage = data_loading(raw_file_path, custom_montage_path, raw_visulization_path)
-    
-    # 2.1 Data  Preprocessing 数据预处理
-    raw_preprocessed = raw_preprocessing(raw, subjectName, raw_visulization_path)
-    # Status update
-    preprocessing_succeed = True
-    logging.info('--Preprocessing completed: '+ subjectName)
+    try:
+        # 1. Data loading 数据导入
+        raw, montage = data_loading(raw_file_path, custom_montage_path, raw_visulization_path)
+        
+        if(preprocess_status != True):
+            # 2.1 Data  Preprocessing 数据预处理
+            raw_preprocessed = raw_preprocessing(raw, subjectName, raw_visulization_path)
+            # Status update
+            preprocessing_succeed = True
+            logging.info('--Preprocessing completed: '+ subjectName)
 
-    # 2.2 ICA 独立因子分析
-    raw_ica_preprocessed, ica_preprocessed, exclude_idx = raw_ica(raw_preprocessed, raw_visulization_path)
-    logging.info('--ICA completed: '+ subjectName)
+            # 2.2 ICA 独立因子分析
+            raw_ica_preprocessed, ica_preprocessed, exclude_idx = raw_ica(raw_preprocessed, raw_visulization_path)
+            logging.info('--ICA completed: '+ subjectName)
 
-    # The ICA files save before annotation reset
-    raw_ica_preprocessed.save('./preprocessedFiles/raw_ica_' + subjectName + str(get_timestamp()) + '.fif')
-    logging.info('--ICA fif files saved: '+ subjectName)
+            # The ICA files save before annotation reset
+            # raw_ica_preprocessed.save('./preprocessedFiles/raw_ica_' + subjectName + str(get_timestamp()) + '.fif')
+            raw_ica_preprocessed.save('./preprocessedFiles/raw_ica_' + subjectName + '.fif', overwrite=True)
+            logging.info('--ICA fif files saved: '+ subjectName)
 
-    # Status update
-    ica_succeed = True
+            # Status update
+            ica_succeed = True
+        else:
+            preprocess_status = True
+            ica_succeed = True
+            
+        if(annotation_reset_status != True):
+            # 3. Reset Annotations for a raw file
+            annotations_experimental = get_experimental_raw_list_from_annotations(raw_ica_preprocessed, TRAINING_LABELS, EXPERIMENTAL_LABELS)
+            raw_ica_preprocessed.set_annotations(annotations_experimental)
+            raw_ica_preprocessed.save('./preprocessedFiles/raw_ica_' + subjectName + '.fif', overwrite=True)
+            logging.info('Reset annotations completed: '+ subjectName)
 
-    # 3. Reset Annotations for a raw file
-    annotations_experimental = get_experimental_raw_list_from_annotations(raw_ica_preprocessed, TRAINING_LABELS, EXPERIMENTAL_LABELS)
-    raw_ica_preprocessed.set_annotations(annotations_experimental)
-    logging.info('Reset annotations completed: '+ subjectName)
+            # Status update
+            annotation_reset_succeed = True
+        else:
+            annotation_reset_succeed = True
 
-    # Status update
-    annotation_reset_succeed = True
+    except Exception as e:
+        logging.error(subjectName + ": " + str(e))
     
     return preprocessing_succeed, ica_succeed, annotation_reset_succeed
 
 if __name__ == "__main__":
     sysArgs = parse_args()
     subjectName = sysArgs.subjectName
-    raw_file_path = './data/yuedurenwu01-12 Data 202301291643.edf'
-    custom_montage_path = './data/64_ch_montage.loc'
-    raw_visulization_path = './visulization/' + subjectName
+    # raw_file_path = './data/yuedurenwu01-12 Data 202301291643.edf'
+    raw_file_path = './data/Driving Test 04 Acq 2023_02_24_1956 Data.edf'
+    custom_montage_path = MONTAGE_PATH
+    raw_visulization_path = VISUALIZATION_FIGURE_PATH + subjectName
     args = {
         "subjectName": subjectName,
         "raw_file_path": raw_file_path,

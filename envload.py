@@ -1,6 +1,7 @@
 import os
 import ast
 import numpy as np
+import logging
 from dotenv import load_dotenv
 
 # Initial
@@ -22,5 +23,14 @@ FIXED_DURATION = float(os.getenv('FIXED_DURATION'))
 TRAINING_LABELS = ast.literal_eval(os.getenv('TRAINING_LABELS'))
 EXPERIMENTAL_LABELS = ast.literal_eval(os.getenv('EXPERIMENTAL_LABELS'))
 LOGS_PATH = os.getenv('LOGS_PATH')
+MONTAGE_PATH = os.getenv('MONTAGE_PATH')
+VISUALIZATION_FIGURE_PATH = os.getenv('VISUALIZATION_FIGURE_PATH')
+META_METRIC_PATH = os.getenv('META_METRIC_PATH')
 EPOCH_TMIN = float(os.getenv('EPOCH_TMIN'))
 EPOCH_TMAX = float(os.getenv('EPOCH_TMAX'))
+
+logging.basicConfig(filename=LOGS_PATH,
+                    filemode='a',
+                    format='%(asctime)s,%(msecs)03d %(levelname)-8s [%(filename)s:%(lineno)d] %(message)s',
+                    datefmt='%H:%M:%S',
+                    level=logging.INFO)

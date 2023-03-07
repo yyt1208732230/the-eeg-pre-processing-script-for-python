@@ -21,11 +21,11 @@ from util import *
 
 # Initial
 
-logging.basicConfig(filename=LOGS_PATH,
-                    filemode='a',
-                    format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-                    datefmt='%H:%M:%S',
-                    level=logging.INFO)
+# logging.basicConfig(filename=LOGS_PATH,
+#                     filemode='a',
+#                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+#                     datefmt='%H:%M:%S',
+#                     level=logging.INFO)
 
 # File Name
 FILENAME = 'Reading_Yueteng'
@@ -107,11 +107,12 @@ def getEpochs(path_raw_ica_preprocessed):
 
     # Reset Events for Raw
     events,events_id = mne.events_from_annotations(raw_ica_preprocessed)
-    raw_ica_preprocessed.add_events(events, stim_channel=None, replace=True)
-    events = mne.find_events(raw_ica_preprocessed)
+    # raw_ica_preprocessed.add_events(events, stim_channel=None, replace=True)
+    # events = mne.find_events(raw_ica_preprocessed)
 
     # Epoch Raw with Events
-    epochs = mne.Epochs(raw_ica_preprocessed.drop_channels(FILTERED_CHANNELS), events, events_id, tmin=EPOCH_TMIN, tmax=EPOCH_TMAX)
+    # epochs = mne.Epochs(raw_ica_preprocessed.drop_channels(FILTERED_CHANNELS), events, events_id, tmin=EPOCH_TMIN, tmax=EPOCH_TMAX)
+    epochs = mne.Epochs(raw_ica_preprocessed, events, events_id, tmin=EPOCH_TMIN, tmax=EPOCH_TMAX)
     epochs.apply_baseline((None,0))
 
     return epochs
@@ -197,7 +198,7 @@ def run_trf_power(args):
     # custom_montage_path = args["custom_montage_path"]
     raw_visulization_path = args["raw_visulization_path"]
     path_raw_ica_preprocessed = args["path_raw_ica_preprocessed"]
-    prestep_succeed = args["prestep_succeed"]
+    trf_status = args["trf_status"]
 
     # 1. Data loading 数据导入
     # raw, montage = data_loading(raw_file_path, custom_montage_path, raw_visulization_path)
@@ -218,29 +219,26 @@ def run_trf_power(args):
         engaged_cal.to_csv(resultPathList['path_power_tf_overall'])
         trf_power_succeed = True
         logging.info('Power generated on:' + resultPathList['path_power_tf_overall'])
-        visulization_power(engaged_cal)
+        logging.info('Time frequency (power) processsing completed: '+ subjectName)
+        power_visulization(engaged_cal)
     except Exception as e:
         logging.error('Failed to get power values: '+ str(e))
 
-    logging.info('Time frequency (power) processsing completed: '+ subjectName)
 
     # 5. ERP plotting
     try:
         engaged_cal = getPower(epochs['engage'].average(), frqList, resultPathList)
         engaged_cal.to_csv(resultPathList['path_power_engaged'])
         logging.info('Engaged Power generated on:' + resultPathList['path_power_engaged'])
-        visulization_power(engaged_cal)
+        power_visulization(engaged_cal)
 
         disengaged_cal = getPower(epochs['disengage'].average(), frqList, resultPathList)
         disengaged_cal.to_csv(resultPathList['path_power_disengaged'])
         logging.info('Engaged Power generated on:' + resultPathList['path_power_disengaged'])
-        visulization_power(disengaged_cal)
+        power_visulization(disengaged_cal)
     except Exception as e:
         logging.error('Failed to ERP processing: '+ str(e))
 
-    # Status update
-    trf_power_succeed = True
-    
     return trf_power_succeed
 
 if __name__ == "__main__":
@@ -251,9 +249,9 @@ if __name__ == "__main__":
     # raw_file_path = './data/yuedurenwu01-12 Data 202301291643.edf'
     subjectName = 'ERP_test022101'
     path_raw_ica_preprocessed = './preprocessedFiles/raw_ica_Reading_Yueteng1675365526.fif'
-    custom_montage_path = './data/64_ch_montage.loc'
-    raw_visulization_path = './visulization/' + subjectName
-    prestep_succeed = True
+    custom_montage_path = MONTAGE_PATH
+    raw_visulization_path = VISUALIZATION_FIGURE_PATH + subjectName
+    preprocess_status = True
 
     args = {
         "subjectName": subjectName,
@@ -261,7 +259,7 @@ if __name__ == "__main__":
         # "custom_montage_path": custom_montage_path,
         "raw_visulization_path": raw_visulization_path,
         "path_raw_ica_preprocessed": path_raw_ica_preprocessed,
-        "prestep_succeed": prestep_succeed
+        "preprocess_status": preprocess_status
     }
 
     trf_power_succeed = run_trf_power(args)
