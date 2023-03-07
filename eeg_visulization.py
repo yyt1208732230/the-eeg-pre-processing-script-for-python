@@ -62,7 +62,7 @@ def data_loading(raw_file_path, custom_montage_path, raw_visulization_path='./')
 
     return raw, montage
 
-def power_visulization(df_power):
+def power_visulization(df_power, raw_visulization_path = None):
 
     figureSaved = False
     df_power_overall = None
@@ -86,7 +86,9 @@ def power_visulization(df_power):
     legend = ax.legend(loc='upper right', shadow=True, fontsize='medium')
     plt.title('TRF')
     # plt.show()
-    plt.savefig('figure-'+ str(get_timestamp()) + '.png')
+    if (raw_visulization_path is not None):
+        plt.savefig(raw_visulization_path + 'figure-'+ str(get_timestamp()) + '.png')
+        figureSaved = True
 
     return figureSaved
 
