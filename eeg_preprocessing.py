@@ -14,7 +14,7 @@ from mne_icalabel import label_components
 
 # Initial
 # File Name
-FILENAME = 'Reading_Yueteng'
+FILENAME = 'Reading_Cao'
 # Data Loading
 RAW_VISULIZATION = False
 # Preprocessing
@@ -40,9 +40,9 @@ training_prase = [
 experimental_prase = [
     'engage', 'disengage', #Reading 第1组
     'disengage', 'engage', #Reading 第2组
-    'engage', 'disengage', #Reading 第3组
-    'disengage', 'engage', #Reading 第4组
-    'engage', 'disengage', #Reading 第5组
+    # 'engage', 'disengage', #Reading 第3组
+    # 'disengage', 'engage', #Reading 第4组
+    # 'engage', 'disengage', #Reading 第5组
 ]
 
 # Utils
@@ -55,9 +55,11 @@ def get_timestamp():
 
 # --------------------------------------
 # 1. Data loading 数据导入
-sample_data_raw_file = ('./data/yuedurenwu01-12 Data 202301291643.edf')
+sample_data_raw_file = ('./data/Reading Cao Acq 2023_02_24_1803 Data.edf')
 raw = mne.io.read_raw_edf(sample_data_raw_file, preload=True)
 channel_count = len(raw.ch_names)
+
+raw = raw.drop_channels(['EKG', 'EMG'])
 
 # 导入电极位置配置文件
 locs_info_path = ('./data/64_ch_montage.loc')
@@ -169,7 +171,7 @@ def get_experimental_raw_list_from_annotations(raw_temp, training_prase, experim
     description = []
     onset_training = []
     onset_experimental = []
-    fixed_duration = 50.0
+    fixed_duration = 100.0
     fixed_description = ''
     annotation_count = 0
 

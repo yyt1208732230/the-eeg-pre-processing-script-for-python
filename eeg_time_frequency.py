@@ -14,7 +14,7 @@ from mne.time_frequency import tfr_morlet
 
 # Initial
 # File Name
-FILENAME = 'Reading_Yueteng'
+FILENAME = 'Reading_Cao'
 # Data Loading
 RAW_VISULIZATION = False
 # Preprocessing
@@ -22,8 +22,8 @@ RAW_PREPROCESSING_VISULIZATION = False
 DURATION_PLOT=10
 FILTERED_CHANNELS = ['HEO', 'Trigger', 'CZ', 'CB1', 'CB2']
 SECONDS_CROP_FROM = 5.0
-RANGE_FREQUENCE_HIGHEST = 40
-RANGE_FREQUENCE_LOWEST = 0
+RANGE_FREQUENCE_HIGHEST = 31
+RANGE_FREQUENCE_LOWEST = 3
 HZ_RESAMPLE = 200
 REF_CHANNELS=['M1', 'M2']
 # ICA
@@ -40,9 +40,9 @@ training_prase = [
 experimental_prase = [
     'engage', 'disengage', #Reading 第1组
     'disengage', 'engage', #Reading 第2组
-    'engage', 'disengage', #Reading 第3组
-    'disengage', 'engage', #Reading 第4组
-    'engage', 'disengage', #Reading 第5组
+    # 'engage', 'disengage', #Reading 第3组
+    # 'disengage', 'engage', #Reading 第4组
+    # 'engage', 'disengage', #Reading 第5组
 ]
 
 # Output File Name
@@ -53,9 +53,9 @@ path_power_disengaged_alpha = './preprocessedFiles/' + FILENAME + '_disengaged_a
 path_power_disengaged_beta = './preprocessedFiles/' + FILENAME + '_disengaged_beta-tfr.csv'
 path_power_disengaged_theta = './preprocessedFiles/' + FILENAME + '_disengaged_theta-tfr.csv'
 
-path_power_engaged = './preprocessedFiles/' + FILENAME + '_engaged_-tfr.csv'
-path_power_disengaged = './preprocessedFiles/' + FILENAME + '_engaged_-tfr.csv'
-path_power_tf_overall = './preprocessedFiles/' + FILENAME + '-tfr.csv'
+path_power_engaged = 'preprocessedFiles/results/' + FILENAME + '_engaged_-tfr.csv'
+path_power_disengaged = 'preprocessedFiles/results/' + FILENAME + '_engaged_-tfr.csv'
+path_power_tf_overall = 'preprocessedFiles/results/' + FILENAME + '-tfr.csv'
 
 #α，β，θ Frequency Configuration
 freqs_alpha = np.arange(8, 13, 0.5)
@@ -64,9 +64,11 @@ freqs_theta = np.arange(4, 8, 0.5)
 
 # --------------------------------------
 # 1. Data loading 数据导入
-sample_data_raw_file = ('./data/yuedurenwu01-12 Data 202301291643.edf')
+sample_data_raw_file = ('./data/Reading Cao Acq 2023_02_24_1803 Data.edf')
 raw = mne.io.read_raw_edf(sample_data_raw_file, preload=True)
 channel_count = len(raw.ch_names)
+
+raw = raw.drop_channels(['EKG', 'EMG'])
 
 # 导入电极位置配置文件
 locs_info_path = ('./data/64_ch_montage.loc')
@@ -81,7 +83,7 @@ if(RAW_VISULIZATION is True):
     raw.plot(duration=5, n_channels=channel_count)
 
 # Load preprocessed Raw file
-path_raw_ica_preprocessed = ('./preprocessedFiles/raw_ica_Reading_Yueteng1675365526.fif')
+path_raw_ica_preprocessed = ('preprocessedFiles/raw_ica_Reading_Cao1677376686.fif')
 raw_ica_preprocessed = mne.io.read_raw(path_raw_ica_preprocessed, preload=True)
 # raw_ica_preprocessed.drop_channels(FILTERED_CHANNELS)
 
@@ -91,7 +93,7 @@ raw_ica_preprocessed.add_events(events, stim_channel=None, replace=True)
 events = mne.find_events(raw_ica_preprocessed)
 
 # Epoch Raw with Events
-epochs = mne.Epochs(raw_ica_preprocessed.drop_channels(FILTERED_CHANNELS), events, events_id, tmin=-0.5, tmax=50.0)
+epochs = mne.Epochs(raw_ica_preprocessed.drop_channels(FILTERED_CHANNELS), events, events_id, tmin=-5.0, tmax=50.0)
 epochs.apply_baseline((None,0))
 
 target_engage = epochs['engage'].average()
