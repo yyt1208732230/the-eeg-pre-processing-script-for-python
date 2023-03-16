@@ -20,13 +20,6 @@ from util import *
 
 # Initial
 
-# logging.basicConfig(filename=LOGS_PATH,
-#                     filemode='a',
-#                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-#                     datefmt='%H:%M:%S',
-#                     level=logging.INFO)
-
-
 # --------------------------------------
 # 1. Data loading 数据导入
 def data_loading(raw_file_path, custom_montage_path, raw_visulization_path='./'):
