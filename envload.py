@@ -6,8 +6,11 @@ from dotenv import load_dotenv
 
 # Initial
 load_dotenv()
+
+
 RAW_VISULIZATION = bool(os.getenv('RAW_VISULIZATION') == 'True')
 ICA_VISULIZATION = bool(os.getenv('ICA_VISULIZATION') == 'True')
+
 FILTERED_CHANNELS = ast.literal_eval(os.getenv('FILTERED_CHANNELS'))
 DURATION_PLOT = float(os.getenv('DURATION_PLOT'))
 RAW_PREPROCESSING_VISULIZATION = bool(os.getenv('RAW_PREPROCESSING_VISULIZATION') == 'True')

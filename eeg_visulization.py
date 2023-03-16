@@ -20,14 +20,6 @@ from util import *
 
 # Initial
 
-# logging.basicConfig(filename=LOGS_PATH,
-#                     filemode='a',
-#                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-#                     datefmt='%H:%M:%S',
-#                     level=logging.INFO)
-
-# visual_file_path = './preprocessedFiles/yuetengTest01-tfr.csv'
-
 # --------------------------------------
 # 1. Data loading 数据导入
 def data_loading(raw_file_path, custom_montage_path, raw_visulization_path='./'):
@@ -43,6 +35,7 @@ def data_loading(raw_file_path, custom_montage_path, raw_visulization_path='./')
         montage(montage): The montage object.
     '''
     pass
+
     succeed = False
     # sample_data_raw_file = ('./data/yuedurenwu01-12 Data 202301291643.edf')
     sample_data_raw_file = (raw_file_path)
@@ -63,6 +56,9 @@ def data_loading(raw_file_path, custom_montage_path, raw_visulization_path='./')
     return raw, montage
 
 def power_visulization(df_power, raw_visulization_path = None):
+    '''Get power visulization then save it as png.
+    '''
+    pass
 
     figureSaved = False
     df_power_overall = None
@@ -93,6 +89,8 @@ def power_visulization(df_power, raw_visulization_path = None):
     return figureSaved
 
 def ica_visulization(raw, show=True, raw_visulization_path = None):
+    '''Get ICA visulization from Raw object data then save it as png.
+    '''
     fig = None
     fig = raw.copy().plot(duration=DURATION_PLOT, show=show)
     if (raw_visulization_path is not None):
@@ -108,13 +106,10 @@ def parse_args():
     sysArgs = parse.parse_args()
     return sysArgs
 
-# df_power_overall.loc[:, ~df_power_overall.columns.isin(['condition', 'time', 'epoch', 'freq'])]
-# list(df_power_overall.loc[:, ~df_power_overall.columns.isin(['condition', 'time', 'epoch', 'freq'])])
-# df_power_overall.iloc[:, :1]
-# df_power_overall.iloc[:, 0]
-# list(df_power_overall.loc[:, ~df_power_overall.columns.isin(['Unnamed: 0','condition', 'time', 'epoch', 'freq'])])
-
 if __name__ == "__main__":
+    '''Only use when function testing or few figures.
+    '''
+
     # sysArgs = parse_args()
     # subjectName = sysArgs.subjectName
     # path_raw_ica_preprocessed = sysArgs.icaRawFilePath

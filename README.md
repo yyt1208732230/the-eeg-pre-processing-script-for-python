@@ -21,7 +21,7 @@ The default configuration will affects all the batch files.
 ### Setting II-customize the scripts: the functions in each .py file
 like `eeg_preprocessing.py`
 
-` def get_experimental_raw_list_from_annotations()`
+` def get_experimental_raw_list_from_annotations(raw, training_prase, experimental_prase)`
 
 ` def run_preprocessing(args) ` ...
 

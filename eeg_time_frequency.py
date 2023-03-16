@@ -21,16 +21,15 @@ from util import *
 
 # Initial
 
-# logging.basicConfig(filename=LOGS_PATH,
-#                     filemode='a',
-#                     format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-#                     datefmt='%H:%M:%S',
-#                     level=logging.INFO)
-
-# File Name
-FILENAME = 'Reading_Yueteng'
-
 def getResultPathList(fileName):
+    '''Get the output result paths.
+
+    Args:
+        fileName (str): the file name.
+
+    Returns:
+        resultPathList(dict): The list with result saving paths.
+    '''
     pass
 
     # Output File Name
@@ -50,6 +49,11 @@ def getResultPathList(fileName):
 
 #α，β，θ Frequency Configuration
 def configFrequency():
+    '''Configure the frequency.
+
+    Returns:
+        frqList(dict): The frequency configuration for trf analysis.
+    '''
     pass
 
     frqList = {
@@ -98,11 +102,19 @@ def data_loading(raw_file_path, custom_montage_path, raw_visulization_path='./')
 
 
 def getEpochs(path_raw_ica_preprocessed):
+    '''Getting Epochs from raw date (with annotations).
+
+    Args:
+        path_raw_ica_preprocessed (str): The path of raw data with reset annotations.
+
+    Returns:
+        epochs(Epoch): The Epoch object from the events generated from annotations.
+    '''
     pass
 
     # Load preprocessed Raw file
-    # path_raw_ica_preprocessed = ('./preprocessedFiles/raw_ica_Reading_Yueteng1675365526.fif')
     raw_ica_preprocessed = mne.io.read_raw(path_raw_ica_preprocessed, preload=True)
+    # path_raw_ica_preprocessed = ('./preprocessedFiles/raw_ica_Reading_Yueteng1675365526.fif')
     # raw_ica_preprocessed.drop_channels(FILTERED_CHANNELS)
 
     # Reset Events for Raw
@@ -119,6 +131,16 @@ def getEpochs(path_raw_ica_preprocessed):
 
 
 def getPower(epochs, frqList, resultPathList):
+    '''Getting Epochs from raw date (with annotations).
+
+    Args:
+        epochs (Epoch): Epoches.
+        frqList (dict): The frequency configuration.
+        resultPathList (dict): The paths for getting results.
+
+    Returns:
+        engaged_cal(npy): The TRF results.
+    '''
     pass
 
     _epochs = None
@@ -192,6 +214,16 @@ def parse_args():
 
 # Execute preprocessing 
 def run_trf_power(args):
+    '''The main function for executing TRF processing scripts.
+
+    Args:
+        args (dict): basic parameters involved in preprocessing based on each participant
+
+    Returns:
+        trf_power_succeed(bool): TRF processing complete or not.
+    '''
+    pass
+
     trf_power_succeed = False
     subjectName = args["subjectName"]
     # raw_file_path = args["raw_file_path"]

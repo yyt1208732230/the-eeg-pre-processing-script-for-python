@@ -134,7 +134,9 @@ def raw_ica(raw, raw_visulization_path='./'):
         random_state=97,
         fit_params=dict(extended=True),
     )
+    # 将ICA配置应用在raw数据上
     ica_preprocessed.fit(raw_process_temp)
+    # 取伪迹
     ic_labels = label_components(raw_process_temp, ica_preprocessed, method="iclabel")
     labels = ic_labels["labels"]
     exclude_idx = [idx for idx, label in enumerate(labels) if label not in ICA_ACCECPTED]
@@ -153,7 +155,7 @@ def raw_ica(raw, raw_visulization_path='./'):
 
 #  ------------------------------------
 # 3. Epoching & Re-Annotation 将点标注(原标注)，改为定长的段标注 (改方法需根据实验修改或重写)
-# This function needs to be modified or rewritten to suit the experiment
+# This function needs to be modified or rewritten according to the experiment design
 
 def get_experimental_raw_list_from_annotations(raw, training_prase, experimental_prase):
     '''Get Experimental Raw List / New Annotations from annotations
@@ -182,10 +184,13 @@ def get_experimental_raw_list_from_annotations(raw, training_prase, experimental
     raw_temp = None
     raw_temp = raw.copy()
 
+    # 获取Raw data 原有annotation信息
     onset = raw_temp.annotations.onset
     description = raw_temp.annotations.description
     len_onset = len(onset)
     len_description = len(description)
+
+    # 过滤不符合条件的annotation
     for idx, _desc in enumerate(description):
         if(_desc == ANNOTATION_DESCRIPTION_TRAINING_STRAT):
             onset_training.append(onset[idx])
@@ -193,11 +198,12 @@ def get_experimental_raw_list_from_annotations(raw, training_prase, experimental
         if(_desc == ANNOTATION_DESCRIPTION_EXPERIMENTAL_STRAT): #Origin 正常版本
             onset_experimental.append(onset[idx] - 5.0)
 
+    # 坏标注的数据处理：全局的experimental_prase设置需要与raw data anntation 所需数量匹配
     if(len(onset_experimental) != len(experimental_prase)):
         logging.error("Sth wrong with the length from the onset and description of annotations. " + len(onset_experimental) + " to " + len(experimental_prase))
         raise Exception("Sth wrong with the length from the onset and description of annotations.")
 
-
+    # 生成新的annotation对象
     duration_experimental.extend([fixed_duration for i in range(len(onset_experimental))])
     annotations_experimental = mne.Annotations(onset_experimental, duration_experimental, experimental_prase)
     # raws_experimental = raw_temp.crop_by_annotations(annotations_experimental, verbose = 'debug')
@@ -214,8 +220,19 @@ def parse_args():
     sysArgs = parse.parse_args()
     return sysArgs
 
-# Execute preprocessing 
+# Execute preprocessing (this function can be customize for your experiment setting)
 def run_preprocessing(args):
+    '''Run preprocessing function is the main function for sequentially integratation.
+
+    Args:
+        args (dict): basic parameters involved in preprocessing based on each participant
+
+    Returns:
+        preprocessing_succeed(bool): Preprocessing complete or not.
+        ica_succeed(bool): ICA processing complete or not.
+        annotation_reset_succeed(bool): New annotation reset or not. (important)
+    '''
+    pass
     preprocessing_succeed = False
     ica_succeed = False
     annotation_reset_succeed = False
