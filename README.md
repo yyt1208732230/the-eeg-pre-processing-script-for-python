@@ -14,6 +14,7 @@ update metric file with your raw data (.edf) and initial the metric with False b
 ---
 
 ## Settings:
+The packages of `mne`, `python-dotenv` were included.
 
 ### Setting I-global configuration: .Env configuration
 The default configuration will affects all the batch files.
