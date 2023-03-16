@@ -276,10 +276,14 @@ def run_preprocessing(args):
     
     return preprocessing_succeed, ica_succeed, annotation_reset_succeed
 
+
+
+
 if __name__ == "__main__":
-    sysArgs = parse_args()
-    subjectName = sysArgs.subjectName
+    # sysArgs = parse_args()
+    # subjectName = sysArgs.subjectName
     # raw_file_path = './data/yuedurenwu01-12 Data 202301291643.edf'
+    subjectName = 'SubjectTest'
     raw_file_path = './data/Driving Test 04 Acq 2023_02_24_1956 Data.edf'
     custom_montage_path = MONTAGE_PATH
     raw_visulization_path = VISUALIZATION_FIGURE_PATH + subjectName
@@ -287,7 +291,10 @@ if __name__ == "__main__":
         "subjectName": subjectName,
         "raw_file_path": raw_file_path,
         "custom_montage_path": custom_montage_path,
-        "raw_visulization_path": raw_visulization_path
+        "raw_visulization_path": raw_visulization_path,
+        "preprocess_status": False,
+        "annotation_reset_status": False
+
     }
     preprocessing_succeed, ica_succeed, annotation_reset_succeed = run_preprocessing(args)
-    pass
+    # preprocessing_succeed, ica_succeed, annotation_reset_succeed = run_preprocessing_car(args)

@@ -1,4 +1,4 @@
 subject_name,raw_file_path,preprocess_status,annotation_reset_status,trf_status,bad_channels
-participant01,./data/Reading Cao Acq 2023_02_24_1803 Data.edf,True,True,True,
-Cao_01,./data/Reading Cao Acq 2023_02_24_1803 Data.edf,True,True,True,
-participant03,./data/Reading Cao Acq 2023_02_24_1803 Data.edf,True,True,True,
+participant01,./data/Reading Cao Acq 2023_02_24_1803 Data.edf,FALSE,FALSE,FALSE,
+Cao_01,./data/Reading Cao Acq 2023_02_24_1803 Data.edf,FALSE,FALSE,FALSE,
+participant03,./data/Reading Cao Acq 2023_02_24_1803 Data.edf,FALSE,FALSE,FALSE,
