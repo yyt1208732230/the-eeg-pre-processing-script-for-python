@@ -227,12 +227,14 @@ def run_trf_power(args):
 
     # 5. ERP plotting
     try:
-        engaged_cal = getPower(epochs['engage'].average(), frqList, resultPathList)
+        # engaged_cal = getPower(epochs['engage'].average(), frqList, resultPathList)
+        engaged_cal = getPower(epochs['engage'], frqList, resultPathList)
         engaged_cal.to_csv(resultPathList['path_power_engaged'])
         logging.info('Engaged Power generated on:' + resultPathList['path_power_engaged'])
         power_visulization(engaged_cal)
 
-        disengaged_cal = getPower(epochs['disengage'].average(), frqList, resultPathList)
+        # disengaged_cal = getPower(epochs['disengage'].average(), frqList, resultPathList)
+        disengaged_cal = getPower(epochs['disengage'], frqList, resultPathList)
         disengaged_cal.to_csv(resultPathList['path_power_disengaged'])
         logging.info('Engaged Power generated on:' + resultPathList['path_power_disengaged'])
         power_visulization(disengaged_cal)
